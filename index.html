@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti, amiga especial</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>Para ti, que haces más bonito el mundo 💌</h1>
+  </header>
+
+  <main>
+    <section class="carta-bloque">
+      <h2>Donde empieza nuestra historia</h2>
+      <p>A veces la distancia se siente más larga en los días especiales…  
+      Pero tú, con tu risa contagiosa y tus mensajes inesperados, siempre consigues estar cerca.</p>
+    </section>
+
+    <section class="carta-bloque">
+      <h2>Tu luz en mi camino</h2>
+      <p>Hoy celebro tu vida, aunque no pueda abrazarte.</p>
+      <button class="ver-mas" onclick="mostrarExtra(this)">Ver más</button>
+      <p class="extra-texto" style="display: none;">
+        Celebro tu ternura, tu fuerza, tu forma única de ver el mundo. Gracias por compartir conmigo tus locuras, tus silencios y tus batallas.
+      </p>
+    </section>
+
+    <section class="carta-bloque frase">
+      <p>“Las amistades verdaderas no conocen de distancias, solo de memorias que siguen brillando.”</p>
+    </section>
+
+    <section class="carta-bloque playlist">
+      <h2>Tu música favorita 🎶</h2>
+      <p>Este playlist fue armado con amor y cariño para ti:</p>
+  
+      <div class="reproductor-marco">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5Ws7hFt0n4ol2z4NfulcXv?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+
+      <p class="nota-musica"><em>Que esta banda sonora te abrace cada día... 💜</em></p>
+    </section>
+
+    <section class="carta-bloque cierre">
+      <p>Nos debemos una tarde sin relojes y mil abrazos acumulados.  
+      Hasta entonces, esto es mi forma de decir: <em>te quiero muchísimo y estoy celebrándote desde aquí.</em></p>
+      <p class="firma">Con cariño,<br>Chriss 💜</p>
+    </section>
+
+    <section class="carta-bloque especial">
+      <button class="mensaje-secreto" onclick="mostrarMensaje(this)">Haz clic aquí 💌</button>
+      <p class="mensaje-oculto" style="display: none;">
+        ¡Hola de nuevo! 🌷  
+        Solo quería recordarte que el mundo es más bonito desde que estás en él.  
+        Que tus días estén llenos de sonrisas auténticas y momentos que te hagan sentir especial.  
+        Gracias por existir 🕊️
+      </p>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles-config.json', function() {
+      console.log('✨ Partículas cargadas correctamente');
+    });
+  </script>
+
+  <script>
+    function mostrarExtra(boton) {
+      const texto = boton.nextElementSibling;
+      texto.style.display = (texto.style.display === 'none') ? 'block' : 'none';
+      boton.textContent = (texto.style.display === 'block') ? 'Ocultar' : 'Ver más';
+    }
+  </script>
+
+  <script>
+    function mostrarMensaje(boton) {
+      const mensaje = boton.nextElementSibling;
+      mensaje.style.display = (mensaje.style.display === 'none') ? 'block' : 'none';
+      boton.textContent = (mensaje.style.display === 'block') ? 'Ocultar mensaje ✨' : 'Haz clic aquí 💌';
+    }
+  </script>
+</body>
+</html>
